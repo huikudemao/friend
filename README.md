@@ -1,4 +1,3 @@
 # friend
-仿微信朋友圈的微信小程序
-friends是springboot相关代码
-xiaochengxu是微信小程序开发相关代码
+friends文件夹是springboot相关代码
+xiaochengxu文件夹是微信小程序开发相关代码
