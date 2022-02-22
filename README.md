@@ -1,3 +1,3 @@
 # friend
 friends文件夹是springboot相关代码
-xiaochengxu文件夹是微信小程序开发相关代码
+pengyouquan文件夹是微信小程序开发相关代码
