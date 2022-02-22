@@ -1,0 +1,16 @@
+<!--pages/news/news.wxml-->
+<!-- wxs是小程序的脚本语言 -->
+<wxs src="./news.wxs" module="util"></wxs>
+<view class="news-view1" >
+    <view class="news-view2" >{{news.title}}</view>
+    <view class="news-view3" >
+        <view>{{news.name}}</view>
+        <view class="news-view4" >{{news.time}}</view>
+    </view>
+    <view  style="font-size: 36rpx;">
+    <image src="{{news.img}}" style="width: 99%;" bindtap="getimage"></image>
+        <text decode="{{true}}"  user-select>
+            {{util.format(news.text)}}
+        </text>
+    </view>
+</view>

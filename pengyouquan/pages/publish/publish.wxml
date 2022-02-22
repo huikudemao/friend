@@ -1,0 +1,40 @@
+<view class="publish">
+    <!-- 发表按钮 -->
+        <button class="pub-btn" type="primary" size="mini" bindtap="getsubmit">发表</button>
+        <!-- 输入文字 -->
+        <textarea bindblur="bindTextAreaBlur" placeholder="这一刻的想法..." bindinput="gettext" class="pub-text"/>
+        <!-- 添加并展示图片 -->
+        <view class="pub-content">
+        <!-- 展示图片 -->
+            <block wx:for="{{picture}}" wx:key="a">
+              <image src='{{item}}' mode='aspecFill' class="pub-image"></image>
+            </block>
+            <!-- 展示视频 -->
+            <block wx:if="{{video}}">
+                <video src="{{video}}" class="pub-video"></video>
+            </block>
+        <!-- 添加图片 -->
+            <view  wx:if="{{picture.length==null || picture.length<9}}" bindtap='chooseImage'  class="pub-jia">+</view>
+            <!-- 上传视频 -->
+            <view class="pub-position">
+                <view class="lines"></view>
+                <view class="pub-pos-wz" bindtap="getvideo">
+                    <image src="../../image/shiping.png" class="pub-icon1"></image>
+                    <view class="pub-pos-text">上传视频</view>
+                    <image src="../../image/jiantou.png" class="pub-icon2"></image>
+                </view>
+                <view class="lines"></view>
+            </view>
+        <!-- 添加位置 -->
+            <view class="pub-position1">
+                <!-- <view class="lines"></view> -->
+                <view class="pub-pos-wz" bindtap="getposition">
+                    <image src="../../image/weizhi.png" class="pub-icon1"></image>
+                    <view class="pub-pos-text">{{pos}}</view>
+                    <image src="../../image/jiantou.png" class="pub-icon2"></image>
+                </view>
+                <view class="lines"></view>
+            </view>
+        </view>
+        
+</view>

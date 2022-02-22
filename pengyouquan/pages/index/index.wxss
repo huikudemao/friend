@@ -1,0 +1,92 @@
+.cover{
+    width: 100%;
+    height: 450rpx;
+}
+.navigator{
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    height: 70rpx;
+}
+.nav-image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.userinfo{
+    display: flex;
+    /* border: 1rpx solid #000000; */
+    position: relative;
+    top: -100rpx;
+    padding-right: 30rpx;
+}
+.userinfo-name{
+    flex: 1;
+    text-align: right;
+    line-height: 130rpx;
+    /* border: 1rpx solid #000000; */
+    color: #ffffff;
+}
+.userinfo-avatar{
+    width: 130rpx;
+    height: 130rpx;
+    border: 1rpx solid #ffffff;
+    border-radius: 15rpx;
+    overflow:hidden;
+}
+.list{
+    /* 内容默认水平·对齐 */
+    display: flex;
+    /* position: relative; */
+}
+.avatar1{
+    flex: 1;
+    width: 100rpx;
+    height: 100rpx;
+    border: 1rpx solid #ffffff;
+    border-radius: 15rpx;
+    overflow:hidden;
+}
+.neirong{
+    flex:6
+}
+.name1{
+    color:rgb(36, 46, 134);
+}
+.text{
+    font-size: 35rpx;
+    white-space: pre-wrap;
+    margin-bottom: 10rpx;
+}
+.cover1{
+    height: 190rpx;
+    width: 190rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+}
+.video{
+    width: 40%;
+    height: 250rpx;
+}
+.lines{
+    width: 100%;
+    height: 1rpx;
+    border-top: 1rpx solid #e0e0e0;
+    margin-top: 25rpx;
+    margin-bottom: 25rpx;
+}
+.date{
+    font-size: 27rpx;
+    color:rgb(104, 104, 104);
+}
+.position{
+    font-size: 30rpx;
+    color:rgb(36, 46, 134);
+    margin-bottom: 20rpx;
+}
+.qianming{
+    position: relative;
+    top:-100rpx;
+    left: 20rpx;
+    color: rgb(114, 114, 114);
+    font-size: 34rpx;
+}

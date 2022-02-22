@@ -1,0 +1,10 @@
+<!--pages/position/position.wxml-->
+<view wx:for="{{pois}}" wx:key="index" >
+<!-- data-index传参 -->
+    <view style="margin-left: 30rpx;" data-index='{{index}}' bindtap="getposition">
+        <view style="font-size: 35rpx;">{{item.title}}</view>
+        <view style="font-size: 30rpx;color: rgb(128, 128, 128);">{{item.address}}</view>
+    </view>
+    <view class='lines'></view>
+</view>
+

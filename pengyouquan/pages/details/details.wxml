@@ -1,0 +1,76 @@
+<!--pages/details/details.wxml-->
+<!-- 头像等信息 -->
+<view class="content">
+    <view class="list">
+    <!-- 发布者的头像 -->
+        <view class="avatar1" bindtap="getUserProfile">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+
+        <view class="neirong">
+        <!-- 发布者的昵称 -->
+            <view class="name1">
+                <open-data type="userNickName"></open-data>
+            </view>
+            <view>
+            <!-- 发布文字 -->
+                <view class="text">{{details.text}}</view>
+            <!-- 发布的图片 -->
+                <image wx:for="{{details.picture}}" wx:key="index" src="{{item}}" class="cover1" data-item='{{item}}' bindtap="getimage"></image>
+            </view>
+             <!-- 发布的视频 -->
+             <video src="{{details.video}}" wx:if="{{details.video}}" class="video"></video>
+             <!-- 发布的地点 -->
+             <view class="position">{{details.position}}</view>
+            <!-- 发布时间 -->
+            <view class="date">{{details.time}}</view>
+            <!-- 评论点赞功能 ，右侧小按钮-->
+            <view >
+                <image bindtap="chooseMore" src="../../image/gengduo.png" class="deta-img"></image>
+               
+                <view wx:if="{{isshow}}" class="deta-view1">
+                <!-- 点赞 -->
+                   <view class="deta-view2" wx:if="{{zan==0}}" bindtap="getyes">
+                        <image src="../../image/aixin.png" class="deta-img1"></image>
+                        <view>{{dzname}}</view>
+                   </view>
+                   <view class="deta-view2" wx:if="{{zan==1}}" bindtap="getyes1">
+                        <image src="../../image/aixin.png" class="deta-img1"></image>
+                        <view>{{dzname}}</view>
+                   </view>
+                   <!-- 评论 -->
+                    <view bindtap="getcommen" class="deta-view3">
+                        <image src="../../image/pinglun.png" class="deta-img2"></image>
+                        <block>评论</block>
+                    </view>
+                </view>
+            </view>
+            <!-- 评论、点赞等具体内容 -->
+            <view class="commentary" >
+                <!-- 点赞 -->
+                <view class="comm-view">
+                    <image src="../../image/aixin1.png" class="comm-img"></image>
+                    <block> {{details.numbers}}人点赞</block>
+                </view>
+                <view class="lines"></view>
+                <!-- 评论 -->
+                <view wx:for="{{commentary}}" wx:key="index" wx:for-item="comm" wx:if="{{comm.commentary}}"  class="comm-view1">
+                    <view class="comm-view2">{{comm.name}}</view>
+                    <block>: </block>
+                    <block>{{comm.commentary}}</block>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 发送评论的输入框及按钮 -->
+    <view wx:if="{{shows}}" class="speech">
+                <form catchsubmit="formSubmit" class="speech-form">
+                    <view class="speech-view1">
+                        <button formType="submit" type="primary" size="mini" class="speech-btn">发送</button>
+                    </view>
+                    <view class="speech-view2">
+                        <input name="input" focus maxlength="100" placeholder="评论" class="speech-input"/>
+                    </view>                  
+                </form>
+            </view>
+</view>

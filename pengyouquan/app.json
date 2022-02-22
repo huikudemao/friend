@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/find/find",
+        "pages/news/news",
+        "pages/publish/publish",
+        "pages/position/position",
+        "pages/details/details"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "image/icon_component.png",
+                "selectedIconPath": "image/icon_component_HL.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "iconPath": "image/icon_API.png",
+                "selectedIconPath": "image/icon_API_HL.png",
+                "text": "发现"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

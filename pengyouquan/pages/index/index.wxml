@@ -1,0 +1,50 @@
+<!-- 封面 -->
+<view ><image src="{{tempFilePaths}}" class="cover" bindtap='chooseImage'></image></view>
+<!-- 跳转发表页，catchtap防止冒泡，getPublish空方法 -->
+<navigator url="/pages/publish/publish" catchtap="getPublish" class="navigator">
+    <image src="../../image/xiangji.png" class="nav-image" ></image>
+</navigator>
+
+<!-- 头像等信息 -->
+<view>
+    <view class="userinfo" bindtap="getUserProfile">
+      <view class="userinfo-name">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+    <view class="qianming">个性签名：越努力越幸运</view>
+</view>
+<!-- 已发布状态列表 -->
+<view class="content" wx:for="{{content}}" wx:key="index">
+    <view class="list">
+    <!-- 发布者的头像 -->
+        <view class="avatar1">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="neirong" >
+        <!-- 发布者的昵称 -->
+            <view class="name1">
+                <open-data type="userNickName"></open-data>
+            </view>
+            <view bindtap="getdetails" data-id="{{item.id}}">
+            <!-- 发布文字 -->
+                <view class="text">{{item.text}}</view>
+            <!-- 发布的图片 -->
+            <block wx:for="{{item.picture}}" wx:for-item="pic" wx:key="index"  wx:if="{{pic}}">
+                <image  wx:if="{{pic}}" src="{{pic}}" class="cover1"></image>
+            </block>
+            <!-- 发布的视频 -->
+            <video src="{{item.video}}" wx:if="{{item.video}}" class="video" ></video>
+            </view>
+            <!-- 发布的地点 -->
+            <view class="position">{{item.position}}</view>
+            <!-- 发布时间 -->
+            <view class="date">{{item.time}}</view>
+            
+        </view>
+    </view>
+    <view class="lines"></view>
+</view>

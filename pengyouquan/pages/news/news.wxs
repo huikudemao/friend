@@ -1,0 +1,11 @@
+// 解决服务器返回的\n 编码后的变成\\n的问题，利用正则解决
+// format格式
+var format = function (text) {
+	if (!text) {
+        return
+    }
+    var reg = getRegExp('\\\\n', 'g')
+    return text.replace(reg,'\n')
+}
+
+module.exports.format=format

@@ -1,0 +1,22 @@
+<!--pages/find/find.wxml-->
+<view class="find-ser">
+    <input type="text" placeholder="请输入搜索内容" bindinput="getinput" class="find-input"/>
+    <button type="primary" size="mini" class="find-btn" bindtap="getsearch">搜索</button>
+</view>
+<view class="lines"></view>
+<!-- 内容展示 -->
+<view wx:for="{{news}}" wx:key="index">
+   <view class="find-content" bindtap="getnews" data-id="{{item.id}}">
+        <view class="find-view1">
+            <view style="font-size: 35rpx;">{{item.title}}</view>
+            <view class="find-view2" >
+                <view>{{item.name}}</view>
+                <view class="find-view3" >{{item.time}}</view>
+            </view>
+        </view>
+        <image src="{{item.img}}" class="find-img"></image>
+   </view>
+   <view class="lines"></view>
+</view>
+
+

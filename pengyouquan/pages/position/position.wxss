@@ -1,0 +1,8 @@
+/* pages/position/position.wxss */
+.lines{
+    width: 100%;
+    height: 1rpx;
+    border-top: 1rpx solid #e0e0e0;
+    margin-top: 25rpx;
+    margin-bottom: 25rpx;
+}

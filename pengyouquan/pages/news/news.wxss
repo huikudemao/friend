@@ -1,0 +1,22 @@
+/* pages/news/news.wxss */
+.news-view1{
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-bottom: 50rpx;
+}
+.news-view2{
+    font-size: 38rpx;
+    margin-top: 20rpx;
+}
+.news-view3{
+    color: rgb(139, 139, 139);
+    font-size: 33rpx;
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+}
+.news-view4{
+    margin-left: 20rpx;
+    font-size: 32rpx;
+    margin-top: 2rpx;
+}
